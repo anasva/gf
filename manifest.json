@@ -1,17 +1,30 @@
 {
   "name": "Get Females",
   "version": "1.0",
+  "manifest_version": 2,
   "description": "Get the beautiful females wearing beautiful lingerie and dresses.",
-  "background_page": "background.html",
+  "background": { "scripts": ["background.js"] },
   "content_scripts": [
     {
-      "matches": ["http://*.macys.com/*", "http://*.agentprovocateur.com/*", "http://*.barenecessities.com/*"],
+      "matches": ["http://*.macys.com/*",
+                  "http://*.agentprovocateur.com/*",
+                  "http://*.barenecessities.com/*",
+                  "http://*.bravoerotica.com/*"],
       "css": ["lightbox2/css/lightbox.css"],
-      "js": ["lightbox2/js/prototype.js", "lightbox2/js/builder.js", "lightbox2/js/effects.js", "lightbox2/js/scriptaculous.js", "background.js"]
+      "js": ["lightbox2/js/prototype.js",
+             "lightbox2/js/builder.js",
+             "lightbox2/js/effects.js",
+             "mylightbox.js",
+             "myutils.js",
+             "getfemales.js"]
     }
   ],
   "permissions": [
     "tabs", "http://*/*"
+  ],
+  "web_accessible_resources": [
+    "lightbox2/images/loading.gif",
+    "lightbox2/images/closelabel.gif"
   ],
   "browser_action": {
       "default_title": "Get this female",

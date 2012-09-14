@@ -3,7 +3,7 @@
 <script>
   // Called when the user clicks on the browser action.
   chrome.browserAction.onClicked.addListener(function(tab) {
-    chrome.tabs.executeScript(null, {code:"(new Lightbox()).start();"});
+    chrome.tabs.executeScript(null, {code:"getFemales();"});
   });
 //  chrome.browserAction.setBadgeBackgroundColor({color:[0, 200, 0, 100]});
 //  chrome.browserAction.setBadgeText({text:"M"});
